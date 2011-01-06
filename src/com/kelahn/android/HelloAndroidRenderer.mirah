@@ -2,14 +2,19 @@ import "javax.microedition.khronos.egl.EGLConfig"
 import "javax.microedition.khronos.opengles.GL10"
  
 import "android.opengl.GLSurfaceView"
-import "Renderer", "android.opengl.GLSurfaceView.Renderer"
 
-class HelloAndroidRenderer < GLSurfaceView::Renderer
+class HelloAndroidRenderer 
+	implements GLSurfaceView.Renderer
+
+	def test(value:int)
+	
+	end
+
 	def onSurfaceCreated(gl:GL10, config:EGLConfig)
 		
 	end
 
-	def onSurfaceChanged(gl:GL10, w:integer, h:integer)
+	def onSurfaceChanged(gl:GL10, w:int, h:int)
 		gl.glViewport(0,0,w,h)
 	end
 
