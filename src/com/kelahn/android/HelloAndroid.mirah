@@ -7,7 +7,7 @@ import "Layout", "com.kelahn.android.R$layout"
 class HelloAndroid < Activity
   def onCreate(savedInstanceState:Bundle)
     super(savedInstanceState)
-	#@view = HelloAndroidView.new(self)
-    #setContentView(@view)
+	@view = HelloAndroidView.new(self)
+    setContentView(@view)
   end
 end
