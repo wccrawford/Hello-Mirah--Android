@@ -6,19 +6,15 @@ import "android.opengl.GLSurfaceView"
 class HelloAndroidRenderer 
 	implements GLSurfaceView.Renderer
 
-	def test(value:int)
-	
-	end
-
-	def onSurfaceCreated(gl:GL10, config:EGLConfig)
+	def onSurfaceCreated(gl:GL10, config:EGLConfig):void
 		
 	end
 
-	def onSurfaceChanged(gl:GL10, w:int, h:int)
+	def onSurfaceChanged(gl:GL10, w:int, h:int):void
 		gl.glViewport(0,0,w,h)
 	end
 
-	def onDrawFrame(gl:GL10)
+	def onDrawFrame(gl:GL10):void
 #		gl.glClearColor(.9, .2, .2)
 		gl.glClear(GL10.GL_COLOR_BUFFER_BIT)
 	end
