@@ -8,9 +8,7 @@ class HelloAndroidRenderer
 	implements GLSVRenderer
 	
 	def initialize
-		@red = float(0.9)
-		@blue = float(0.2)
-		@green = float(0.2)
+		setColor(float(0.9), float(0.2), float(0.2))
 	end
 
 	def onSurfaceCreated(gl:GL10, config:EGLConfig):void
@@ -24,6 +22,12 @@ class HelloAndroidRenderer
 	def onDrawFrame(gl:GL10):void
 		gl.glClearColor(@red, @blue, @green, float(1))
 		gl.glClear(GL10.GL_COLOR_BUFFER_BIT)
+	end
+
+	def setColor(red:float, blue:float, green:float)
+		@red = red
+		@blue = blue
+		@green = green
 	end
 end
 
