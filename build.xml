@@ -88,23 +88,5 @@
     -->
     <!-- version-tag: 1 -->
     <import file="${sdk.dir}/tools/ant/build.xml" />
-    <target name="compile"
-            description="Compiles project's .mirah files into .class files">
-
-      <exec executable="javac" dir="gen">
-        <arg value="-d" />
-        <arg value="../bin/classes"/>
-        <arg value="../gen/com/kelahn/android/R.java"/>
-      </exec>
-
-      <exec executable="mirahc" dir="src">
-        <env key="CLASSPATH" file="/home/piotr/devel/android/android-sdk-linux/platforms/android-7/android.jar" />
-        <arg value="-d" />
-        <arg value="../bin/classes" />
-        <arg value="-c"/>
-        <arg value="../bin/classes:../gen" />
-        <arg value="." />
-      </exec>
-    </target>
  
 </project>
