@@ -3,12 +3,6 @@
     <target name="mirah"
             description="Compiles project's .mirah files into .class files">
 
-      <exec executable="javac" dir="gen">
-        <arg value="-d" />
-        <arg value="../bin/classes"/>
-        <arg value="../gen/com/kelahn/android/R.java"/>
-      </exec>
-
       <exec executable="mirahc" dir="src">
         <arg value="-d" />
         <arg value="../bin/classes" />
@@ -17,5 +11,5 @@
         <arg value="." />
       </exec>
     </target>
-    <target name="-pre-compile" depends="mirah" />
+    <target name="-post-compile" depends="mirah" />
 </project>
