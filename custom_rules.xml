@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="imported">
+    <target name="mirah"
+            description="Compiles project's .mirah files into .class files">
+
+      <exec executable="mirahc" dir="src" failonerror="true">
+        <arg value="-d" />
+        <arg value="../bin/classes" />
+        <arg value="-c"/>
+        <arg value="${sdk.dir}/platforms/${target}/android.jar:../bin/classes:../gen" />
+        <arg value="." />
+      </exec>
+    </target>
+    <target name="-post-compile" depends="mirah" />
+</project>
