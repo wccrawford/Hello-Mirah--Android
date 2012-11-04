@@ -3,7 +3,7 @@
     <target name="mirah"
             description="Compiles project's .mirah files into .class files">
 
-      <exec executable="mirahc" dir="src">
+      <exec executable="mirahc" dir="src" failonerror="true">
         <arg value="-d" />
         <arg value="../bin/classes" />
         <arg value="-c"/>
